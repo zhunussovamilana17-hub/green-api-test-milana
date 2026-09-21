@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREEN-API Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <!-- Авторизация -->
+      <div class="form-group">
+        <input type="text" id="idInstance" placeholder="idInstance">
+        <input type="text" id="apiTokenInstance" placeholder="apiTokenInstance">
+      </div>
+
+      <!-- Кнопки получения информации -->
+      <div class="form-group">
+        <button onclick="getSettings()">getSettings</button>
+        <button onclick="getStateInstance()">getStateInstance</button>
+      </div>
+
+      <!-- Отправка текстового сообщения -->
+      <div class="form-group">
+        <input type="text" id="chatIdMessage" placeholder="77771234567">
+        <textarea id="messageText" placeholder="Hello World!"></textarea>
+        <button onclick="sendMessage()">sendMessage</button>
+      </div>
+
+      <!-- Отправка файла по URL -->
+      <div class="form-group">
+        <input type="text" id="chatIdFile" placeholder="77771234567">
+        <input type="text" id="fileUrl" placeholder="https://my.site.com/img/horse.png">
+        <button onclick="sendFileByUrl()">sendFileByUrl</button>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <label for="responseOutput">Ответ:</label>
+      <textarea id="responseOutput" readonly placeholder="Здесь будет отображаться ответ API..."></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
